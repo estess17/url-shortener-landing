@@ -1,5 +1,98 @@
 @import "../../../styles";
 
 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  &-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo {
+    font-size: 32px;
+    margin-right: 3rem;
+    color: $vary-dark-violet;
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+
+    &__item {
+      margin-right: 25px;
+
+      a {
+        text-decoration: none;
+        color: $grayish-violet;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.2s;
+
+        &:hover {
+          color: $vary-dark-violet;
+          transition: all 0.2s;
+        }
+      }
+    }
+  }
+
+  &-auth {
+    display: flex;
+    align-items: center;
+
+    &__login {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-right: 30px;
+      color: $grayish-violet;
+      font-weight: 600;
+      font-size: 16px;
+
+      &:hover {
+        color: $vary-dark-violet;
+        transition: all 0.2s;
+      }
+    }
+
+    &__sign {
+    }
+  }
+
+  &-mobile {
+    display: none;
+
+    &__button {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        margin-bottom: 5px;
+        width: 25px;
+        height: 3px;
+        background: $grayish-violet;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .nav {
+    &-list {
+      display: none;
+    }
+
+    &-auth {
+      display: none;
+    }
+
+    &-mobile {
+      display: block;
+    }
+  }
 }

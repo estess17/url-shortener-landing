@@ -1,0 +1,22 @@
+@import "../../../styles";
+
+.promo {
+  background: $dark-violet url("../../../assets/images/bg-boost-desktop.svg")  0 0 / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+
+  &-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1044px) {
+  .promo {
+    background: $dark-violet url("../../../assets/images/bg-boost-mobile.svg")  0 0 / cover no-repeat;
+  }
+}
